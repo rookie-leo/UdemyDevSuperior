@@ -4,6 +4,7 @@ import heranca.entities.Account;
 import heranca.entities.BusinessAccount;
 import heranca.entities.SavingsAccount;
 
+/*Aula UPCASTING  e DOWNCASTING*/
 public class Program {
 
 	public static void main(String[] args) {
@@ -41,5 +42,6 @@ public class Program {
 			acc5.updateBalance();
 			System.out.println("Update!");
 		}
+		
 	}
 }

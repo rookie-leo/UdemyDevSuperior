@@ -38,7 +38,7 @@ public class Account {
 
 	/*Metodo para saque*/
 	public void withdraw(double amount) {
-		balance -= amount;
+		balance -= amount + 5.0;
 	}
 	
 	/*Metodo para deposito*/

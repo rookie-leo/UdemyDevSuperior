@@ -25,4 +25,10 @@ public class SavingsAccount extends Account{
 	public void updateBalance() {
 		balance += balance * interestRate;
 	}
+	
+	/*Realiza saque na conta poupanca*/
+	@Override //Informa que o metodo eh uma sobreposicao do metodo da super classe
+	public void withdraw(double amount) {
+		balance -= amount;
+	}
 }
