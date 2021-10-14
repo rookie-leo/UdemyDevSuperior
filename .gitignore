@@ -6,6 +6,7 @@ target/
 
 
 
+<<<<<<< HEAD
 ### STS ###
 .apt_generated
 .classpath
@@ -14,6 +15,14 @@ target/
 .settings
 .springBeans
 .sts4-cache
+=======
+.idea/
+*.iml
+
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+>>>>>>> 673253aa6e3b762b5f00894761e90ba8e0bdf6b0
 
 ### IntelliJ IDEA ###
 .idea
