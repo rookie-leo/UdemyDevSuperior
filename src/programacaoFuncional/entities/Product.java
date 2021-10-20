@@ -35,6 +35,14 @@ public class Product {
 		return p.getPrice() >= 100.0;
 	}
 
+	/**
+	 * @method verifica se o valor do objeto eh igual ou maior do que 100
+	 * @return boolean true ou false  
+	 * */
+	public boolean nonStaticProductPredicate() {
+		return getPrice() >= 100.0;
+	}
+
 	@Override
 	public String toString() {
 		return "Product [name=" + name + ", price=" + price + "]";

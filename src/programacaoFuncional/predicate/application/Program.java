@@ -19,7 +19,7 @@ public class Program {
 		list.add(new Product("HD Case", 80.50));
 		
 //		Referencia do metodo
-		list.removeIf(Product::staticProductPredicate);
+		list.removeIf(Product::nonStaticProductPredicate);
 		
 		for (Product product : list) {
 			System.out.println(product);
