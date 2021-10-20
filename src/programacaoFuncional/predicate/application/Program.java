@@ -2,6 +2,7 @@ package programacaoFuncional.predicate.application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import programacaoFuncional.entities.Product;
 
@@ -18,8 +19,12 @@ public class Program {
 		list.add(new Product("Tablet", 450.00));
 		list.add(new Product("HD Case", 80.50));
 		
-//		Referencia do metodo
-		list.removeIf(Product::nonStaticProductPredicate);
+		double min = 100.0;
+		
+//		Utilizando variavel
+		Predicate<Product> prod = p -> p.getPrice() >= min; 
+		
+		list.removeIf(prod);
 		
 		for (Product product : list) {
 			System.out.println(product);
