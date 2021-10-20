@@ -2,7 +2,6 @@ package programacaoFuncional.predicate.application;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 import programacaoFuncional.entities.Product;
 
@@ -21,10 +20,8 @@ public class Program {
 		
 		double min = 100.0;
 		
-//		Utilizando variavel
-		Predicate<Product> prod = p -> p.getPrice() >= min; 
-		
-		list.removeIf(prod);
+//		Expressao lambda em linha
+		list.removeIf(p -> p.getPrice() >= min);
 		
 		for (Product product : list) {
 			System.out.println(product);
