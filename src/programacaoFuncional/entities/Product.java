@@ -25,6 +25,15 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+	
+	/**
+	 * @method verifica se o valor enviado como argumento eh igual ou maior do que 100
+	 * @param Objeto do tipo produto
+	 * @return boolean true ou false  
+	 * */
+	public static boolean staticProductPredicate(Product p) {
+		return p.getPrice() >= 100.0;
+	}
 
 	@Override
 	public String toString() {
