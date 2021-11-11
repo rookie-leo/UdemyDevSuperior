@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import programacaoFuncional.entities.Product;
 
@@ -25,7 +26,13 @@ public class Program {
 				line = br.readLine();
 			}
 
-			list.forEach(Product::nonStaticPriceUpdate);
+			Double factor = 1.1;
+			
+			Consumer<Product> consumer = p -> {
+				p.setPrice(p.getPrice() * factor);
+			};
+			
+			list.forEach(consumer);
 
 			list.forEach(System.out::println);
 
