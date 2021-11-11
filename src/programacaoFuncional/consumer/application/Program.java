@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import programacaoFuncional.consumer.util.PriceUpdate;
 import programacaoFuncional.entities.Product;
 
 public class Program {
@@ -26,7 +25,7 @@ public class Program {
 				line = br.readLine();
 			}
 
-			list.forEach(Product::staticPriceUpdate);
+			list.forEach(Product::nonStaticPriceUpdate);
 
 			list.forEach(System.out::println);
 
