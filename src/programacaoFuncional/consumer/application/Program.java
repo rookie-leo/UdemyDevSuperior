@@ -26,7 +26,7 @@ public class Program {
 				line = br.readLine();
 			}
 
-			list.forEach(new PriceUpdate());
+			list.forEach(Product::staticPriceUpdate);
 
 			list.forEach(System.out::println);
 

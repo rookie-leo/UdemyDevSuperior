@@ -4,7 +4,7 @@ public class Product {
 
 	private String name;
 	private Double price;
-	
+
 	public Product(String name, Double price) {
 		this.name = name;
 		this.price = price;
@@ -25,27 +25,37 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+
 	
 	/**
-	 * @method verifica se o valor enviado como argumento eh igual ou maior do que 100
+	 * @method atualiza o valor do produto pela porcentagem do valor especificado
+	 * @param recebe como parametro um objeto do tipo produto 
+	 */
+	public static void staticPriceUpdate(Product p) {
+		p.setPrice(p.getPrice() * 1.1);
+	}
+
+	/**
+	 * @method verifica se o valor enviado como argumento eh igual ou maior do que
+	 *         100
 	 * @param Objeto do tipo produto
-	 * @return boolean true ou false  
-	 * */
+	 * @return boolean true ou false
+	 */
 	public static boolean staticProductPredicate(Product p) {
 		return p.getPrice() >= 100.0;
 	}
 
 	/**
 	 * @method verifica se o valor do objeto eh igual ou maior do que 100
-	 * @return boolean true ou false  
-	 * */
+	 * @return boolean true ou false
+	 */
 	public boolean nonStaticProductPredicate() {
 		return getPrice() >= 100.0;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Product [name= %s,  price= %.2f]", name ,price);
+		return String.format("Product [name= %s,  price= %.2f]", name, price);
 	}
 
 }
