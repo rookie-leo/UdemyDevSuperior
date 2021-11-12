@@ -35,7 +35,7 @@ public class Product {
 	}
 
 	public void nonStaticPriceUpdate() {
-		price = price * 1.1;
+		price *= 1.1;
 	}
 
 	/**
