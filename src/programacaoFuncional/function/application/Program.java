@@ -28,7 +28,7 @@ public class Program {
 			}
 
 			List<String> names = list.stream()
-					.map(new UpperCaseName())
+					.map(Product::nonStaticUpperCaseName)
 					.collect(Collectors.toList());
 			
 			names.forEach(System.out::println);

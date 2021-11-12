@@ -26,15 +26,14 @@ public class Product {
 		this.price = price;
 	}
 
-	
 	/**
 	 * @method atualiza o valor do produto pela porcentagem do valor especificado
-	 * @param recebe como parametro um objeto do tipo produto 
+	 * @param recebe como parametro um objeto do tipo produto
 	 */
 	public static void staticPriceUpdate(Product p) {
 		p.setPrice(p.getPrice() * 1.1);
 	}
-	
+
 	public void nonStaticPriceUpdate() {
 		price = price * 1.1;
 	}
@@ -57,6 +56,23 @@ public class Product {
 		return getPrice() >= 100.0;
 	}
 
+	/**
+	 * @method coloca todos os caracterer do nome do produto em caixa alta
+	 * @param objeto do tipo Product
+	 * @return String com todos os caracteres em caixa alta
+	 * */
+	public static String staticUpperCaseName(Product p) {
+		return p.getName().toUpperCase();
+	}
+
+	/**
+	 * @method coloca todos os caracterer do nome do produto em caixa alta
+	 * @return String com todos os caracteres em caixa alta
+	 * */
+	public String nonStaticUpperCaseName() {
+		return name.toUpperCase();
+	}
+	
 	@Override
 	public String toString() {
 		return String.format("Product [name= %s,  price= %.2f]", name, price);
