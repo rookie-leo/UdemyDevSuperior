@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import programacaoFuncional.entities.Product;
@@ -27,8 +28,10 @@ public class Program {
 				line = br.readLine();
 			}
 
+			Function<Product, String> function = p -> p.getName().toUpperCase();
+			
 			List<String> names = list.stream()
-					.map(Product::nonStaticUpperCaseName)
+					.map(function)
 					.collect(Collectors.toList());
 			
 			names.forEach(System.out::println);
