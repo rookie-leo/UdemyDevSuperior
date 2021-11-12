@@ -27,11 +27,10 @@ public class Program {
 				list.add(new Product(fields[0], Double.parseDouble(fields[1])));
 				line = br.readLine();
 			}
-
-			Function<Product, String> function = p -> p.getName().toUpperCase();
 			
 			List<String> names = list.stream()
-					.map(function)
+					.map(p -> 
+						p.getName().toUpperCase())
 					.collect(Collectors.toList());
 			
 			names.forEach(System.out::println);
