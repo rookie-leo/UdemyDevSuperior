@@ -28,12 +28,16 @@ public class Program {
 				list.add(new Product(fields[0], Double.parseDouble(fields[1])));
 				line = br.readLine();
 			}
-			
+
 			ProductSumService pss = new ProductSumService();
-			
-			double sum = pss.filterSum(list);
-			
+
+			double sum = pss.filterSum(list, p -> p.getName().charAt(0) == 'T');
+
 			System.out.printf("Sum= %.2f", sum);
+
+			sum = pss.filterSum(list, p -> p.getPrice() <= 100);
+
+			System.out.printf("\nSum= %.2f", sum);
 
 		} catch (IOException e) {
 			System.out.printf("Erro: %s", e.getMessage());

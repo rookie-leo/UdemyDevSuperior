@@ -1,16 +1,17 @@
 package programacaoFuncional.funcao.util;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 import programacaoFuncional.entities.Product;
 
 public class ProductSumService {
 	
-	public double filterSum(List<Product> list) {
+	public double filterSum(List<Product> list, Predicate<Product> criteria) {
 		double sum = 0.0;
 		
 		for (Product p : list) {
-			if (p.getName().charAt(0) == 'T') {
+			if (criteria.test(p)) {
 				sum += p.getPrice();
 			}
 		}
